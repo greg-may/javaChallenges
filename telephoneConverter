@@ -1,0 +1,37 @@
+package com.example.java;
+import java.util.Scanner;
+
+
+// The point of this program is to create a function that
+// will take in a Phone Number with letters such as "555-GET-FOOD" and replace it with "555-438-3663"
+// This was a Python exercise from the Gaddis text. Converted to Java as a personal challenge
+
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        // Takes in a Phone # Input by the user
+        System.out.println("INSERT PHONE # AS XXX-XXX-XXXX");
+        Scanner s1 = new Scanner(System.in);
+
+        //Converts scan to String
+       String  phone = s1.nextLine();
+
+       String converted = phone.replaceAll("[ABC]","2").replaceAll("[DEF]", "3")
+               .replaceAll("[GHI]", "4").replaceAll("[JKL]","5")
+               .replaceAll("[MNO]","6")
+               .replaceAll("[PQRS]","7").replaceAll("[TUV]","8")
+               .replaceAll("[WXYZ]","9");
+
+       System.out.println(converted);
+
+    }
+
+
+
+
+}
